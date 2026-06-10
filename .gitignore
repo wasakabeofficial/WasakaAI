@@ -1,0 +1,37 @@
+# WasakaAI - Obsidian Vault
+
+# Obsidian
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/plugins/*/data.json
+.obsidian/plugins/*//.gitkeep
+
+# AI / Embeddings
+.smartconnections/
+.chroma/
+
+# System
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+*.swp
+*~
+
+# Secrets (encrypted notes go in vault, but backups don't)
+*.env
+.env
+
+# Ollama
+.ollama/
+
+# ChromaDB
+chromadb_data/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# NO ignorar notas .md — TODO se versiona
+!*.md
