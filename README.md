@@ -1,67 +1,118 @@
-# WasakaAI
+# WasakaAI 🧠⚡
 
-> **Otro tú. Sin límites.**
+**Just A Rather Very Intelligent System** — An elite AI assistant with British composure, 15+ years of cross-domain expertise, and the full power of ECC v2.0.0.
 
-Segundo cerebro personal potenciado por IA. Privado. Local. Tuyo.
+## What Is This
 
-## Qué es
+WasakaAI is a personalized AI agent configuration powered by:
 
-WasakaAI es un sistema de conocimiento que funciona como **otro Alan** — captura todo, conecta lo que tú no conectarías, anticipa necesidades, y pregunta antes de actuar. Nunca olvida. Nunca ejecuta sin consultar.
+- **262 skills** — Domain-specific workflow knowledge (TDD, security, frontend, backend, DevOps, etc.)
+- **25 subagents** — Specialized agents for planning, architecture, code review, security, testing, etc.
+- **35 slash commands** — `/plan`, `/tdd`, `/code-review`, `/security`, `/e2e`, `/orchestrate`, etc.
+- **8 custom tools** — run-tests, check-coverage, security-audit, format-code, lint-check, git-summary, changed-files
+- **Knowledge graph** — Persistent memory across sessions (projects, decisions, learnings, stack)
+- **ECC v2.0.0** — The agent harness operating system by [affaan-m](https://github.com/affaan-m/ecc)
 
-## Principios
-
-1. **Todo se registra** — pero siempre se pregunta antes
-2. **Todo es local** — sin APIs externas para almacenar conocimiento
-3. **Sin límites** — no hay zones excluidas, no hay tabúes
-4. **Todo se archiva, nada se borra** — el Archive es tan valioso como lo activo
-5. **Bilingüe** — español para ti, inglés para lo técnico
-6. **Proactivo pero respetuoso** — propone, no ejecuta ciegamente
-7. **Otro tú** — aprende cómo piensas, conecta desde tu perspectiva
-
-## Estructura PARA+
+## Architecture
 
 ```
-WasakaAI/
-├── 0-Inbox/          → Captura sin fricción
-├── 1-Projects/        → Cosas activas con fecha límite
-├── 2-Areas/           → Responsabilidades continuas
-├── 3-Resources/       → Referencia, temas de interés
-├── 4-Archive/         → NUNCA se borra, se archiva
-├── 5-Daily/           → Journal — cada día registrado
-├── 6-Maps/            → MOCs — índices conectores
-├── 7-Templates/       → Plantillas para crear rápido
-├── 8-System/          → Config, agentes, automatización
-└── 9-Atlas/           → Entidades: personas, lugares, conceptos
+~/.config/opencode/
+├── opencode.json           ← Main config (agents, commands, skills, model)
+├── agent/wasakaai.md       ← WasakaAI identity definition
+├── commands/               ← 35 slash commands
+├── prompts/agents/          ← 25 subagent prompt templates
+├── plugins/                ← ECC hooks integration
+├── tools/                  ← 8 custom tools
+├── instructions/           ← ECC coding standards
+└── skills/                 ← 262 workflow skills
+
+~/WasakaAI/
+├── knowledge/              ← Persistent memory graph
+│   ├── profile/            ← User identity
+│   ├── projects/           ← Brand & product knowledge
+│   ├── stack/              ← Technology references
+│   ├── preferences/        ← User preferences
+│   ├── decisions/          ← ADRs (Architecture Decision Records)
+│   ├── learnings/          ← Discovered patterns
+│   └── sessions/           ← Session logs
+└── .opencode/              ← OpenCode-specific configs
 ```
 
-## Stack Tecnológico
+## Personality
 
-| Componente | Herramienta | Costo |
-|-----------|-------------|-------|
-| Interfaz visual | Obsidian | Gratis |
-| Agente principal | OpenCode Go (JARVIS) | Suscripción |
-| LLM local | Ollama (Llama 3.2 3B) | Gratis |
-| Embeddings locales | Ollama (nomic-embed-text) | Gratis |
-| Búsqueda semántica | ChromaDB | Gratis |
-| Conexiones IA en Obsidian | Smart Connections | Gratis |
-| Asistente en Obsidian | Copilot plugin + Ollama | Gratis |
-| Captura web | Obsidian Web Clipper | Gratis |
-| Transcripción voz | Whisper (local) | Gratis |
+- **British composure** — Unflappable, measured, always in control
+- **Dry wit** — Subtle, understated, never forced
+- **Proactive intelligence** — Anticipate needs, flag risks, suggest alternatives
+- **Formal respect** — "sir" or "señor". Never patronizing
+- **Precision over verbosity** — One sentence if one suffices
+- **No false comfort** — Broken is broken. Say it.
+- **Loyalty without sycophancy** — Push back when the plan has holes
 
-## Instalación (Arch Linux)
+## Non-Negotiable Principles
 
-Ver [`8-System/config/installation-guide-arch-linux.md`](8-System/config/installation-guide-arch-linux.md)
+1. No hallucination. Verify when uncertain.
+2. No over-engineering. Simplest correct solution wins.
+3. Security is a design constraint, not an afterthought.
+4. No code without error handling.
+5. No assumptions. Ask before designing.
+6. No flattery. Honesty over comfort. Always.
 
-## Hardware
+## Setup
 
-- **OS**: Arch Linux (KDE Plasma 6 + Wayland)
-- **CPU**: Intel i5-1135G7 (4c/8t, 2.4GHz)
-- **RAM**: 32 GB DDR4
-- **Disco**: 1.8TB
-- **GPU**: Intel Iris Xe GT2 (integrada)
-- **Modelos locales recomendados**: Llama 3.2 3B, Phi-3 mini 3.8B, nomic-embed-text
-- **Modelos pesados** (razonamiento profundo): via OpenCode Go
+```bash
+# 1. Clone WasakaAI
+git clone https://github.com/wasakabeofficial/WasakaAI ~/WasakaAI
 
-## Licencia
+# 2. Point OpenCode to WasakaAI knowledge
+# In ~/.config/opencode/opencode.json set:
+#   "default_agent": "wasakaai"
+#   "instructions": ["~/WasakaAI/knowledge/INDEX.md", ...]
 
-Privado. Repositorio personal de Alan de Jesus Martinez.
+# 3. Restart OpenCode
+```
+
+## Subagents
+
+| Agent | Purpose |
+|-------|---------|
+| planner | Implementation planning for complex features |
+| architect | System design, scalability, technical decisions |
+| code-reviewer | Code quality, security, maintainability |
+| security-reviewer | Vulnerability detection and remediation |
+| tdd-guide | Test-Driven Development enforcement |
+| build-error-resolver | Build/type error resolution |
+| e2e-runner | Playwright E2E testing |
+| doc-updater | Documentation and codemaps |
+| refactor-cleaner | Dead code cleanup |
+| database-reviewer | PostgreSQL/Supabase specialist |
+| python-reviewer | Python code review |
+| rust-reviewer | Rust code review |
+| loop-operator | Autonomous loop monitoring |
+| harness-optimizer | Agent config tuning |
+
+## Key Slash Commands
+
+| Command | Description |
+|---------|-------------|
+| `/plan` | Create detailed implementation plan |
+| `/tdd` | Enforce TDD workflow with 80%+ coverage |
+| `/code-review` | Review code quality, security, maintainability |
+| `/security` | Run comprehensive security review |
+| `/build-fix` | Fix build and TypeScript errors |
+| `/e2e` | Generate and run E2E tests |
+| `/refactor-clean` | Remove dead code and consolidate |
+| `/orchestrate` | Orchestrate multiple agents |
+| `/learn` | Extract patterns and learnings |
+| `/checkpoint` | Save verification state |
+| `/verify` | Run verification loop |
+| `/eval` | Run evaluation against criteria |
+
+## Credits
+
+- **ECC v2.0.0** by [affaan-m](https://github.com/affaan-m) — Agent harness operating system
+- **JARVIS** concept — Tony Stark's AI assistant
+- **WasakaAI** — Personalized branding by [wasakabeofficial](https://github.com/wasakabeofficial)
+
+## License
+
+MIT
