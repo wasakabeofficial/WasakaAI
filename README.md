@@ -48,14 +48,16 @@ WasakaAI/
 | Captura web | Obsidian Web Clipper | Gratis |
 | Transcripción voz | Whisper (local) | Gratis |
 
-## Instalación en Windows
+## Instalación (Arch Linux)
 
-Ver [`8-System/config/installation-guide-windows.md`](8-System/config/installation-guide-windows.md)
+Ver [`8-System/config/installation-guide-arch-linux.md`](8-System/config/installation-guide-arch-linux.md)
 
 ## Hardware
 
+- **OS**: Arch Linux (KDE Plasma 6 + Wayland)
 - **CPU**: Intel i5-1135G7 (4c/8t, 2.4GHz)
 - **RAM**: 32 GB DDR4
+- **Disco**: 1.8TB
 - **GPU**: Intel Iris Xe GT2 (integrada)
 - **Modelos locales recomendados**: Llama 3.2 3B, Phi-3 mini 3.8B, nomic-embed-text
 - **Modelos pesados** (razonamiento profundo): via OpenCode Go

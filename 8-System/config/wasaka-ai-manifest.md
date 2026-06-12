@@ -91,12 +91,14 @@ CAPTURA → INBOX → PROCESAMIENTO → ESTRUCTURA PARA+ → BÚSQUEDA SEMÁNTIC
 | Control de versiones | Git | Gratis |
 | Hosting repo | GitHub (privado) | Gratis |
 
-## Hardware Referencia
+## Hardware
 
-- CPU: Intel i5-1135G7 (4c/8t, 2.4GHz)
-- RAM: 32 GB DDR4
-- GPU: Intel Iris Xe GT2 (integrada)
-- Modelos locales factibles: ≤7B parámetros
+- **OS**: Arch Linux (KDE Plasma 6 + Wayland)
+- **CPU**: Intel i5-1135G7 (4c/8t, 2.4GHz)
+- **RAM**: 32 GB DDR4
+- **GPU**: Intel Iris Xe GT2 (integrada)
+- **Disco**: 1.8TB (suficiente)
+- **Modelos locales factibles**: ≤7B parámetros (CPU inference)
 
 ## Evolución
 

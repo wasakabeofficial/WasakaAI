@@ -47,11 +47,13 @@ created: 2026-06-10
 
 ### 1. Ollama (LLM Local)
 
-**Instalación en Windows**:
-```powershell
-# Descargar de https://ollama.com/download
-# Instalar y verificar
-ollama --version
+**Instalación en Arch Linux**:
+```bash
+# Instalar
+sudo pacman -S ollama
+
+# Iniciar el daemon
+ollama serve &
 
 # Modelos necesarios
 ollama pull llama3.2:3b          # Razonamiento general (3B params, ~2GB RAM)
@@ -67,7 +69,7 @@ ollama pull nomic-embed-text     # Embeddings (274MB, esencial para búsqueda)
 
 ### 2. ChromaDB (Base Vectorial)
 
-```powershell
+```bash
 pip install chromadb
 ```
 
@@ -111,7 +113,16 @@ pip install openai-whisper
 
 Permite grabar notas de voz y convertirlas a texto automáticamente.
 
-### 5. Scripts de Automatización
+### 5. Whisper (Transcripción de Voz)
+
+```bash
+pip install openai-whisper
+# Modelo "base" (~140MB) para Intel Iris Xe
+```
+
+Permite grabar notas de voz y convertirlas a texto automáticamente.
+
+### 6. Scripts de Automatización
 
 Ubicación: `8-System/automations/`
 
